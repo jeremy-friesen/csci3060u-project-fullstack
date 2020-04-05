@@ -1,0 +1,9 @@
+newitemname               ss              admin           010 0008.2
+joe man                   admin                           003 003.00
+drying pan                testselluser                    010 007.00
+bencil                    Muji            testbuyuser     020 001.00
+pencil                    Muji            testbuyuser     020 001.50
+marker                    Muji            testbuyuser     020 001.50
+Pepe                      Memeco          testbuyuser     069 000350
+bigchungus                Chungus         ss              010 001.50
+drying pan                testselluser                    010 007.00

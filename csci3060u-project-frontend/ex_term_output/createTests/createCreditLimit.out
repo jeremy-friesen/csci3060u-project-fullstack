@@ -1,0 +1,11 @@
+Please login to the system
+Enter username:
+Enter password:
+Login successful
+Enter username for new user:
+Enter password for new user:
+Enter account type for new user:
+Enter credit for new user:
+ERROR: Credit must be between 0 and 999,999
+Logout Successful
+Transactions Listed
