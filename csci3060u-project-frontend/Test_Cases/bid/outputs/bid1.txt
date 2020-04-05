@@ -1,0 +1,4 @@
+Enter Username:
+Enter Command:
+Enter an item name: Enter the seller name: Enter the amount to bid(current bid:10):
+Enter Transaction:

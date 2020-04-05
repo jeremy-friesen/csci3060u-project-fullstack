@@ -1,0 +1,7 @@
+Enter Username:
+Enter Command:
+Enter Username to delete:
+User exampleUsername successfully deleted
+Enter Item:
+Enter seller:
+Error: Item does not exist in the system

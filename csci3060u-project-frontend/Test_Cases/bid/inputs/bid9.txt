@@ -1,0 +1,6 @@
+login
+fullUsername
+bid
+basketball
+currentUser
+exit

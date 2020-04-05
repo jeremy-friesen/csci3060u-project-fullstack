@@ -1,0 +1,8 @@
+Enter Username:
+Enter Command:
+What is the item name?
+What is the seller�s username?
+
+Current highest bid: $15
+
+Error: Bid must be at least 5% greater than the current highest bid

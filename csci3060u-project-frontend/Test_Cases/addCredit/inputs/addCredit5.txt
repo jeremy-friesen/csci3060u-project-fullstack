@@ -1,0 +1,5 @@
+login
+fullUsername
+addCredit
+1001
+exit

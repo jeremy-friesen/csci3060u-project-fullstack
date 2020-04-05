@@ -1,0 +1,4 @@
+Enter Username:
+Enter Command:
+Enter Username to delete:
+User existingUser successfully deleted

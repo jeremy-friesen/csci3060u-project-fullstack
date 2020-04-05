@@ -1,0 +1,7 @@
+login
+fullUsername
+advertise
+Nintendo Switch
+350.00
+200
+exit

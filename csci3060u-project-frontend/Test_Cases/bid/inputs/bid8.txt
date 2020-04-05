@@ -1,0 +1,7 @@
+login
+adminUsername
+bid
+basketball
+someUs3r
+15.00
+exit

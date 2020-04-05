@@ -1,0 +1,5 @@
+Enter Username:
+Enter Command:
+Enter Username:
+Enter Credit Amount:
+Error: Given username does not exist in the system...

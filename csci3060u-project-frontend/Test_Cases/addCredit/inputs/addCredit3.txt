@@ -1,0 +1,6 @@
+login
+adminUsername
+addCredit
+invalidUsername
+5
+exit

@@ -1,0 +1,6 @@
+login
+adminUsername
+addCredit
+accountUsername
+1001
+exit

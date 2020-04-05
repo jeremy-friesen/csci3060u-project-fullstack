@@ -1,0 +1,6 @@
+login
+adminUsername
+refund
+buyUsername
+wrongUsername
+exit

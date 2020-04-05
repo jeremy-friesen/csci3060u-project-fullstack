@@ -1,0 +1,8 @@
+Enter Username:
+Enter Command:
+What is the item name?
+What is the seller�s username?
+
+Current Highest Bid: $15
+
+Error: You do not have sufficient credit to place a bid

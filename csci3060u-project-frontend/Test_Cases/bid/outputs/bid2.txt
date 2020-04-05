@@ -1,0 +1,3 @@
+Enter Username:
+Enter Command:
+Error: You do not have the privileges

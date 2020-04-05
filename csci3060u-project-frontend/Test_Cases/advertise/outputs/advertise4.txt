@@ -1,0 +1,5 @@
+Enter Username:
+Enter Command:
+Enter item name:
+Enter item price:
+Error: Minimum bid price exceeds the max price of an item
