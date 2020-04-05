@@ -116,6 +116,13 @@ struct FullStandard : User{
 		double newBid;
 		std::string newBidString;
 		
+		while(seller.length != 15){
+			seller += " ";
+		}
+		while(itemName.length != 25){
+			itemName += " ";
+		}
+		
 		iItemFile.open(itemFile);
 		if(iItemFile.is_open()){
 			std::string line;
@@ -162,8 +169,8 @@ struct FullStandard : User{
 							info[3] = line.substr(58, 3);
 							info[4] = line.substr(62, 6);
 							
-							std::string possibleItemName = info[0].substr(0, itemName.length());
-							std::string possibleSellerName = info[1].substr(0, seller.length());
+							std::string possibleItemName = info[0];
+							std::string possibleSellerName = info[1];
 					//		std::cout << newBid << " " << (std::to_string(newBid)).length();
 					//		std::cout << possibleItemName << "end\n" << possibleSellerName << "end\n" << newBid << "end\n";
 					//		std::cout << (possibleItemName.compare(itemName)) << " " << possibleSellerName.compare(seller);
@@ -248,6 +255,13 @@ struct BuyStandard : User{
 		double newBid;
 		std::string newBidString;
 		
+		while(seller.length != 15){
+			seller += " ";
+		}
+		while(itemName.length != 25){
+			itemName += " ";
+		}
+		
 		iItemFile.open(itemFile);
 		if(iItemFile.is_open()){
 			std::string line;
@@ -294,8 +308,8 @@ struct BuyStandard : User{
 							info[3] = line.substr(58, 3);
 							info[4] = line.substr(62, 6);
 							
-							std::string possibleItemName = info[0].substr(0, itemName.length());
-							std::string possibleSellerName = info[1].substr(0, seller.length());
+							std::string possibleItemName = info[0];
+							std::string possibleSellerName = info[1];
 					//		std::cout << newBid << " " << (std::to_string(newBid)).length();
 					//		std::cout << possibleItemName << "end\n" << possibleSellerName << "end\n" << newBid << "end\n";
 					//		std::cout << (possibleItemName.compare(itemName)) << " " << possibleSellerName.compare(seller);
@@ -451,6 +465,13 @@ struct Admin : User{
 		double newBid;
 		std::string newBidString;
 		
+		while(seller.length != 15){
+			seller += " ";
+		}
+		while(itemName.length != 25){
+			itemName += " ";
+		}
+		
 		iItemFile.open(itemFile);
 		if(iItemFile.is_open()){
 			std::string line;
@@ -497,8 +518,8 @@ struct Admin : User{
 							info[3] = line.substr(58, 3);
 							info[4] = line.substr(62, 6);
 							
-							std::string possibleItemName = info[0].substr(0, itemName.length());
-							std::string possibleSellerName = info[1].substr(0, seller.length());
+							std::string possibleItemName = info[0];
+							std::string possibleSellerName = info[1];
 					//		std::cout << newBid << " " << (std::to_string(newBid)).length();
 					//		std::cout << possibleItemName << "end\n" << possibleSellerName << "end\n" << newBid << "end\n";
 					//		std::cout << (possibleItemName.compare(itemName)) << " " << possibleSellerName.compare(seller);
