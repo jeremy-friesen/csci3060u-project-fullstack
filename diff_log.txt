@@ -1,28 +1,8 @@
 ______________________________________________
-TEST login1.txt OUTPUT: BAD
-0a1,3
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-
-
-
-______________________________________________
-TEST login2.txt OUTPUT: BAD
-0a1,5
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Error: Already logged in
-> Enter Transaction:
-
-
-
-______________________________________________
 TEST login3.txt OUTPUT: BAD
-0a1,3
-> Enter Transaction:
-> Enter Username: Login unsuccessful.
+3c3
+< Enter Transaction:
+---
 > Enter Transaction:
 \ No newline at end of file
 
@@ -30,11 +10,9 @@ TEST login3.txt OUTPUT: BAD
 
 ______________________________________________
 TEST login4.txt OUTPUT: BAD
-0a1,5
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Insufficient privileges.
+5c5
+< Enter Transaction:
+---
 > Enter Transaction:
 \ No newline at end of file
 
@@ -42,20 +20,23 @@ TEST login4.txt OUTPUT: BAD
 
 ______________________________________________
 TEST login5.txt OUTPUT: BAD
-0a1,3
+0a1
 > Enter Username:
-> Enter Transaction:
+2,5c3
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter the buyer’s account name: 
+< Enter Transaction:
+---
 > Enter Buyer:
 
 
 
 ______________________________________________
 TEST logout1.txt OUTPUT: BAD
-0a1,5
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Thank you for visiting! Goodbye!
+5c5
+< Enter Transaction:
+---
 > Enter Transaction:
 \ No newline at end of file
 
@@ -63,58 +44,48 @@ TEST logout1.txt OUTPUT: BAD
 
 ______________________________________________
 TEST logout2.txt OUTPUT: BAD
-0a1,3
-> Enter Transaction:
-> Cannot process request, no user is logged in.
+3c3
+< Enter Transaction:
+---
 > Enter Transaction:
 \ No newline at end of file
 
 
 
 ______________________________________________
-TEST logout3.txt OUTPUT: BAD
-0a1,7
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Thank you for visiting! Goodbye!
-> Enter Transaction:
-> Cannot process request, no user is logged in.
-> Enter Transaction:
-
-
-
-______________________________________________
 TEST create1.txt OUTPUT: BAD
-0a1,4
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
+4,5c4
+< Enter a username for the new account:Enter type of user (AA=admin, FS=full-standard, BS=buy-standard, SS=sell-standard):HERE
+< Enter Transaction:
+---
 > Enter a username for the new account:Enter type of user (AA=admin, FS=full-standard, BS=buy-standard, SS=sell-standard):Enter Transaction:
 
 
 
 ______________________________________________
 TEST create1.txt TRANSACTION: BAD
-0a1
-> 01 newUsername____ AA 000000.00
-\ No newline at end of file
+1c1
+< 01 newUsername     AA 000000.00
+---
+> 01 newUsername     AA 000000.00
 
 
 
 ______________________________________________
 TEST create2.txt OUTPUT: BAD
-0a1
+1c1
+< Enter Transaction:
+---
 > 
 
 
 
 ______________________________________________
 TEST create3.txt OUTPUT: BAD
-0a1,6
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
+4,5c4,6
+< Enter a username for the new account:Enter type of user (AA=admin, FS=full-standard, BS=buy-standard, SS=sell-standard):exiting transaction
+< Enter Transaction:
+---
 > Enter a username for the new account:Enter type of user (AA=admin, FS=full-standard, BS=buy-standard, SS=sell-standard):
 > Error: Username already exists...
 > Enter Transaction:
@@ -124,23 +95,19 @@ TEST create3.txt OUTPUT: BAD
 
 ______________________________________________
 TEST create4.txt OUTPUT: BAD
-0a1,6
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
+4c4,5
+< Enter a username for the new account:Error: Username must be less than 15 characters
+---
 > Enter a username for the new account:
 > Error: Username must be less than 15 characters
-> Enter Transaction:
 
 
 
 ______________________________________________
 TEST create5.txt OUTPUT: BAD
-0a1,5
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Insufficient privileges.
+5c5
+< Enter Transaction:
+---
 > Enter Transaction:
 \ No newline at end of file
 
@@ -148,7 +115,12 @@ TEST create5.txt OUTPUT: BAD
 
 ______________________________________________
 TEST delete1.txt OUTPUT: BAD
-0a1,4
+1,4c1,4
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter the account name to delete:Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Enter Username to delete:
@@ -158,15 +130,22 @@ TEST delete1.txt OUTPUT: BAD
 
 ______________________________________________
 TEST delete1.txt TRANSACTION: BAD
-0a1
-> 02 existingUser___ AA 000000.00
-\ No newline at end of file
+1c1
+< 02 existingUser    AA 000000.00
+---
+> 02 existingUser    AA 000000.00
 
 
 
 ______________________________________________
 TEST delete2.txt OUTPUT: BAD
-0a1,3
+1,5c1,3
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Insufficient privileges.
+< Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Error: Insufficient Privileges.
@@ -175,7 +154,12 @@ TEST delete2.txt OUTPUT: BAD
 
 ______________________________________________
 TEST delete3.txt OUTPUT: BAD
-0a1,4
+1,4c1,4
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter the account name to delete:Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Enter Username to delete:
@@ -184,8 +168,20 @@ TEST delete3.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST delete3.txt TRANSACTION: BAD
+1d0
+< 02 nonExistantUsername  000000.00
+
+
+
+______________________________________________
 TEST delete4.txt OUTPUT: BAD
-0a1,4
+1,4c1,4
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter the account name to delete:Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Enter Username to delete:
@@ -194,8 +190,21 @@ TEST delete4.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST delete4.txt TRANSACTION: BAD
+1d0
+< 02 thisUsername     000000.00
+
+
+
+______________________________________________
 TEST advertise1.txt OUTPUT: BAD
-0a1,7
+1,5c1,7
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter Item Name :Enter starting bid :NintendoSwitch has now been posted
+< Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Enter item name:
@@ -208,15 +217,24 @@ TEST advertise1.txt OUTPUT: BAD
 
 ______________________________________________
 TEST advertise1.txt TRANSACTION: BAD
-0a1
-> 03 Nintendo Switch____ fullUsername___ 050 350.00
+1c1
+< 03 NintendoSwitch      fullUsername    050 350.00
+\ No newline at end of file
+---
+> 03 NintendoSwitch      fullUsername    100 350.00
 \ No newline at end of file
 
 
 
 ______________________________________________
 TEST advertise2.txt OUTPUT: BAD
-0a1,3
+1,5c1,3
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Insufficient privileges.
+< Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Error: You do not have privileges
@@ -225,7 +243,13 @@ TEST advertise2.txt OUTPUT: BAD
 
 ______________________________________________
 TEST advertise3.txt OUTPUT: BAD
-0a1,4
+1,5c1,4
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter Item Name :Error: Item name exceeds character limit
+< Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Enter item name:
@@ -235,7 +259,13 @@ TEST advertise3.txt OUTPUT: BAD
 
 ______________________________________________
 TEST advertise4.txt OUTPUT: BAD
-0a1,5
+1,4c1,5
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter Item Name :Enter starting bid :
+\ No newline at end of file
+---
 > Enter Username:
 > Enter Command:
 > Enter item name:
@@ -246,7 +276,13 @@ TEST advertise4.txt OUTPUT: BAD
 
 ______________________________________________
 TEST advertise5.txt OUTPUT: BAD
-0a1,7
+1,4c1,7
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter Item Name :Enter starting bid :
+\ No newline at end of file
+---
 > Enter Username:
 > Enter Command:
 > Enter item name:
@@ -259,7 +295,12 @@ TEST advertise5.txt OUTPUT: BAD
 
 ______________________________________________
 TEST bid1.txt OUTPUT: BAD
-0a1,4
+1,4c1,4
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Enter an item name: Enter the seller name: Enter the amount to bid(current bid:10):
@@ -269,16 +310,13 @@ TEST bid1.txt OUTPUT: BAD
 
 
 ______________________________________________
-TEST bid1.txt TRANSACTION: BAD
-0a1
-> basketball_________ user231________ 018.00
-\ No newline at end of file
-
-
-
-______________________________________________
 TEST bid10.txt OUTPUT: BAD
-0a1,8
+1,4c1,8
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -291,8 +329,22 @@ TEST bid10.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid10.txt TRANSACTION: BAD
+1d0
+< 04 basketball          someUs3r        fullUsername    0000016.0
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST bid2.txt OUTPUT: BAD
-0a1,3
+1,5c1,3
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Insufficient privileges.
+< Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Error: You do not have the privileges
@@ -301,7 +353,13 @@ TEST bid2.txt OUTPUT: BAD
 
 ______________________________________________
 TEST bid3.txt OUTPUT: BAD
-0a1,5
+1,5c1,5
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: no item exists
+< Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -311,8 +369,22 @@ TEST bid3.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid3.txt TRANSACTION: BAD
+1d0
+< 04                                     fullUsername    000000.00
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST bid4.txt OUTPUT: BAD
-0a1,5
+1,5c1,5
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: no item exists
+< Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -322,8 +394,21 @@ TEST bid4.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid4.txt TRANSACTION: BAD
+1d0
+< 04                     exit            fullUsername    000000.00
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST bid5.txt OUTPUT: BAD
-0a1,6
+1,4c1,6
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -334,8 +419,21 @@ TEST bid5.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid5.txt TRANSACTION: BAD
+1d0
+< 04 basketball          users1213       fullUsername    000000.00
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST bid6.txt OUTPUT: BAD
-0a1,8
+1,4c1,8
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -348,8 +446,21 @@ TEST bid6.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid6.txt TRANSACTION: BAD
+1d0
+< 04 basketball          someUs3r        fullUsername    0000013.0
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST bid7.txt OUTPUT: BAD
-0a1,8
+1,4c1,8
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -362,8 +473,22 @@ TEST bid7.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid7.txt TRANSACTION: BAD
+1d0
+< 04 basketball          someUs3r        fullUsername    0000015.5
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST bid8.txt OUTPUT: BAD
-0a1,8
+1,5c1,8
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name :Enter the seller name :Enter the amount to bid(current bid:0) :
+< Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -376,8 +501,21 @@ TEST bid8.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid8.txt TRANSACTION: BAD
+1d0
+< 04 basketball          someUs3r        adminUsername   0000015.0
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST bid9.txt OUTPUT: BAD
-0a1,6
+1,4c1,6
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter an item name: Enter the seller name: Enter the amount to bid(current bid:0):Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > What is the item name?
@@ -388,14 +526,18 @@ TEST bid9.txt OUTPUT: BAD
 
 
 ______________________________________________
+TEST bid9.txt TRANSACTION: BAD
+1d0
+< 04 basketball          currentUser     fullUsername    000000.00
+\ No newline at end of file
+
+
+
+______________________________________________
 TEST refund1.txt OUTPUT: BAD
-0a1,7
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Enter the buyer’s account name: 
-> Enter the seller’s account name: 
-> Enter the amount of credit to transfer: 
+7c7
+< Enter Transaction:
+---
 > Enter Transaction:
 \ No newline at end of file
 
@@ -403,20 +545,32 @@ TEST refund1.txt OUTPUT: BAD
 
 ______________________________________________
 TEST refund1.txt TRANSACTION: BAD
-0a1
-> 05 buyUsername____ sellUsername___ 050.00
-\ No newline at end of file
+1c1
+< 05 buyUsername     sellUsername    000050.00
+---
+> 05 buyUsername     sellUsername    000050.00
+
+
+
+______________________________________________
+TEST refund2.txt OUTPUT: BAD
+1,8d0
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter the buyer’s account name: 
+< Enter the seller’s account name: 
+< Enter the amount of credit to transfer: 
+< ERROR: One or both of the given users does not exist...
+< Enter Transaction:
 
 
 
 ______________________________________________
 TEST refund3.txt OUTPUT: BAD
-0a1,8
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Enter the buyer’s account name: 
-> Enter the seller’s account name: 
+6c6,8
+< Enter Transaction:
+---
 > Enter the amount of credit to transfer: 
 > ERROR: One or both of the given users does not exist...
 > Enter Transaction:
@@ -425,31 +579,11 @@ TEST refund3.txt OUTPUT: BAD
 
 
 ______________________________________________
-TEST addCredit1.txt OUTPUT: BAD
-0a1,4
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Enter the account’s username you wish to add credit to:Enter credit amount:Enter Transaction:
-
-
-
-______________________________________________
 TEST addCredit1.txt TRANSACTION: BAD
-0a1
-> 06 accountUsername FS 005.00
-\ No newline at end of file
-
-
-
-______________________________________________
-TEST addCredit2.txt OUTPUT: BAD
-0a1,5
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Enter the amount of credits you would like to add to your account
-> Enter Transaction:
+1c1
+< 06 fullUsername    FS 000005.00
+---
+> 06 fullUsername    FS 000005.00
 
 
 
@@ -463,7 +597,13 @@ TEST addCredit2.txt TRANSACTION: BAD
 
 ______________________________________________
 TEST addCredit3.txt OUTPUT: BAD
-0a1,5
+1,5c1,5
+< Enter Transaction:
+< Enter Username: Logged in successfully.
+< Enter Transaction:
+< Enter the account’s username you wish to add credit to:Enter credit amount:Error: Given username does not exist in the system...
+< Enter Transaction:
+---
 > Enter Username:
 > Enter Command:
 > Enter Username:
@@ -474,26 +614,14 @@ TEST addCredit3.txt OUTPUT: BAD
 
 ______________________________________________
 TEST addCredit4.txt OUTPUT: BAD
-0a1,6
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
+4,5c4,6
+< Enter the account’s username you wish to add credit to:Enter credit amount:Error: Given username does not exist in the system...
+< Enter Transaction:
+---
 > Enter the account’s username you wish to add credit to:Enter credit amount:
 > Error: Credit amount exceeds limit of $1000.00
 > Enter Transaction:
 \ No newline at end of file
-
-
-
-______________________________________________
-TEST addCredit5.txt OUTPUT: BAD
-0a1,6
-> Enter Transaction:
-> Enter Username: Logged in successfully.
-> Enter Transaction:
-> Enter the amount of credits you would like to add to your account
-> Error: Credit amount exceeds limit of $1000.00
-> Enter Transaction:
 
 
 

@@ -1,0 +1,5 @@
+Enter Transaction:
+Enter Username: Logged in successfully.
+Enter Transaction:
+Enter Item Name :Enter starting bid :NintendoSwitch has now been posted
+Enter Transaction:
