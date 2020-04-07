@@ -1,0 +1,6 @@
+basketball          someUs3r        fullUsername    010.00 000000
+sneakers            exampleUsername someBidder      005.00
+NintendoSwitch      fullUsername                      1 0 350.
+PS4                 sellUsername                      1 0 350.
+XBOX                fullUsername                      0 0 350.
+Wii                 fullUsername                      1 0 050.

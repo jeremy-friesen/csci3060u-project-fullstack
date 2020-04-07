@@ -89,7 +89,10 @@ public class AvailableItemsFileManager {
 	// format daysLeft to add preceding 0's
 	public static String formatDaysLeft(String str) {
 		int len = str.length();
-		String retStr = new String(new char[3 - len]).replace("\0", "0");
+		String retStr = "";
+		if(len < 3) {
+			retStr += new String(new char[3 - len]).replace("\0", "0");
+		}
 		return retStr + str;
 	}
 	

@@ -127,7 +127,11 @@ void deleteUser(){
     cin >> username;
 
     User* userToDelete = CurrentUserAccountsFileManager::findUser(username);
-    DailyTransactionFileManager::addDeleteUserTransaction(username, userToDelete->getUserType());
+    string userType = userToDelete->getUserType();
+    if(userType != "AA" && userType != "FS" && userType != "SS" && userType != "BS"){
+      userType = "AA";
+    }
+    DailyTransactionFileManager::addDeleteUserTransaction(username, userType);
   }else{
     cout << "Insufficient privileges." << endl;
   }

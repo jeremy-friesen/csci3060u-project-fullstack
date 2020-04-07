@@ -1,0 +1,6 @@
+login
+adminUsername
+delete
+sellUsername
+exit
+exit

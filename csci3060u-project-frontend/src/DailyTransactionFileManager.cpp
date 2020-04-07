@@ -81,7 +81,6 @@ void DailyTransactionFileManager::addCreateUserTransaction(string newUsername, s
 	string line = "01 ";
 	line += formatUsername(newUsername) + " " + userType + " " + formatCredit(0.00) + "\n";
 	appendLine(line);
-	cout << "HERE" << endl;
 }
 
 // called after delete transaction
@@ -117,7 +116,7 @@ void DailyTransactionFileManager::addRefundTransaction(string buyerUsername, str
 void DailyTransactionFileManager::addAdvertiseTransaction(string itemName, string sellerUsername, int numDays, string minBid){
 	string line = "03 ";
 	line += formatItemName(itemName) + " " + formatUsername(sellerUsername) 
-					+ " " + formatInt(numDays) + " " + formatBid(minBid);
+					+ " " + formatInt(numDays) + " " + formatBid(minBid) + "\n";
 	appendLine(line);
 }
 
@@ -125,6 +124,6 @@ void DailyTransactionFileManager::addAdvertiseTransaction(string itemName, strin
 void DailyTransactionFileManager::addBidTransaction(string itemName, string sellerName, string buyerName, double bid){
 	string line = "04 ";
 	line += formatItemName(itemName) + " " + formatUsername(sellerName) + " "
-					+ formatUsername(buyerName) + " " + formatCredit(bid);
+					+ formatUsername(buyerName) + " " + formatCredit(bid) + "\n";
 	appendLine(line);
 }

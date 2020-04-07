@@ -1,0 +1,6 @@
+login
+adminUsername
+create
+newUsername
+AA
+exit

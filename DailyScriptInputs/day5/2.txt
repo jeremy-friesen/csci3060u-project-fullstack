@@ -1,0 +1,7 @@
+login
+fullUsername
+advertise
+Wii
+50.00
+100
+exit
