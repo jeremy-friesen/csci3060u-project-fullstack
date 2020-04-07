@@ -1,3 +1,3 @@
 02 sellUsername    SS 000000.00
 03 Wii                 fullUsername    100 050.00
-04 basketball          someUs3r        fullUsername    350.00 
+04 basketball          someUs3r        fullUsername    00000350.
